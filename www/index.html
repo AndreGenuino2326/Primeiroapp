@@ -11,16 +11,122 @@
   <link rel="stylesheet" href="lib/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   </script>
+
  <body>
-   <h1>andre zica</h1>
+   <form name="calcform" method="post" action="">
+   <fieldset>
+      <legend>   </legend>
+
+      <label for="valor1">Digite o valor <strong>1</strong>:</label>
+      <input type="text" name="valor1" id="valor1" />
+
+      <label for="valor2">Digite o valor <strong>2</strong>:</label>
+      <input type="text" name="valor2" id="valor2" />
+
+      <label for="valor2">Digite o valor <strong>2</strong>:</label>
+      <input type="text" name="valor3" id="valor4" />
+
+      <label for="valor2">Digite o valor <strong>2</strong>:</label>
+      <input type="text" name="valor" id="valor4" />
+
+      <label for="oper">Selecione a operação:</label>
+      <select name="oper" id="oper">
+         <option value="somar">Somar</option>
+         <option value="subtrair">Subtrair</option>
+         <option value="multiplicar">Multiplifcar</option>
+         <option value="dividir">Dividir</option>
+      </select>
+
+      <label for="res">Resultado:</label>
+      <input type="text" name="res" id="res" />
+
+      <input type="button" value="Calcular" class="botao" onClick="calcular(document.calcform.oper.value)"/>
+   </fieldset>
+</form>
+  <div align="center"><h1></h1></div>
+
    <div classe"container">
      <div class="row">
        <div classe="form-gorup">
-         <label> valor </label>
-         <input type="nunber" class="form-control">
+
+
+
        </div>
+
      </div>
    </div>
+
+   
 </head>
 </body>
-</html>
+<script type="text/javascript">
+function calcular(oper) {
+   var valor1 = document.calcform.valor1.value;
+   var valor2 = document.calcform.valor2.value;
+
+   if (oper == "somar") {
+      var res = parseInt(valor1) + parseInt(valor2);
+   } else {
+      if (oper == "subtrair") {
+         var res = valor1-valor2;
+      } else {
+         if (oper == "multiplicar") {
+            var res = valor1*valor2;
+         } else {
+            var res = valor1/valor2;
+         }
+      }
+   }
+
+   document.calcform.res.value = res;
+}
+</script>
+
+
+
+</script>
+
+
+<style type="text/css">
+
+	form fieldset {
+   margin: 10px auto 10px auto;
+   width: 40%;
+   border: solid black 1px;
+   padding: 3%;
+}
+
+form legend {
+   padding: 6px;
+   margin: 3px;
+   border: solid black 1px;
+   font-size: 90%;
+   font-weight: bold;
+   background-color: #e8e8e8;
+}
+
+form label {
+   display: block;
+   font-size: 11px;
+}
+
+form input {
+   width: 100%;
+   border: solid #ccc 1px;
+   font-size: 11px;
+   margin-bottom: 10px;
+}
+
+form input.botao {
+   display: block;
+   width: auto;
+   float: right;
+}
+
+</script>
+
+
+
+
+
+
