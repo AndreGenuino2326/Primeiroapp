@@ -15,7 +15,7 @@
  <body>
    <form name="calcform" method="post" action="">
    <fieldset>
-      <legend>   </legend>
+      <legend>  </legend>
 
       <label for="valor1">Digite o valor <strong>1</strong>:</label>
       <input type="text" name="valor1" id="valor1" />
@@ -23,10 +23,10 @@
       <label for="valor2">Digite o valor <strong>2</strong>:</label>
       <input type="text" name="valor2" id="valor2" />
 
-      <label for="valor2">Digite o valor <strong>2</strong>:</label>
+      <label for="valor3">Digite o valor <strong>3</strong>:</label>
       <input type="text" name="valor3" id="valor4" />
 
-      <label for="valor2">Digite o valor <strong>2</strong>:</label>
+      <label for="valor4">Digite o valor <strong>4</strong>:</label>
       <input type="text" name="valor" id="valor4" />
 
       <label for="oper">Selecione a operação:</label>
@@ -63,17 +63,19 @@
 function calcular(oper) {
    var valor1 = document.calcform.valor1.value;
    var valor2 = document.calcform.valor2.value;
+      var valor3 = document.calcform.valor2.value;
+         var valor4 = document.calcform.valor2.value;
 
    if (oper == "somar") {
-      var res = parseInt(valor1) + parseInt(valor2);
+      var res = parseInt(valor1) + parseInt(valor2)+ parseInt(valor3)+ parseInt(valor4);
    } else {
       if (oper == "subtrair") {
-         var res = valor1-valor2;
+         var res = valor1-valor2-valor3-valor4;
       } else {
          if (oper == "multiplicar") {
-            var res = valor1*valor2;
+            var res = valor1*valor2*valor3*valor4;
          } else {
-            var res = valor1/valor2;
+            var res = valor1/valor2/valor3/valor4;
          }
       }
    }
